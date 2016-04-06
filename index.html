@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>UTN FRA</title>
+
+		<!--Estilos-->
+		<link rel="stylesheet" type="text/css" href="styles/estilo.css">
+		<link rel="stylesheet" type="text/css" href="styles/animacion.css">
+		<!--final de Estilos-->
+
+		<!--Lógica-Programación-->
+		<script type="text/javascript" src="source/logs.js"></script>
+        <!--Final de Lógica-Programación -->
+	</head>
+	<body onload="showLogForm()">
+		<div class="CajaInicio animated bounceInRight">
+			<form id="LogInForm">
+
+				<h3 id="formTitle">SIGN IN</h3><br>
+
+					<table id="signInForm">
+						<tr>
+							<td>Usuario: </td>
+							<td><input type="text" placeholder="Ingrese un usuario" id="userName"></input></td>
+						</tr>
+						<tr>
+							<td>Contraseña: </td>
+							<td><input type="password" placeholder="Ingrese una contraseña" id="userPass"></input></td>
+						</tr>
+					</table>
+
+					<table id="signUpForm">
+						<tr>
+							<td>Usuario: </td>
+							<td><input type="text" placeholder="Ingrese un usuario" id="userName"></input></td>
+						</tr>
+						<tr>
+							<td>Contraseña: </td>
+							<td><input type="password" placeholder="Ingrese una contraseña" id="userPass"></input></td>
+						</tr>
+						<tr>
+							<td>Reingrese contraseña: </td>
+							<td><input type="password" placeholder="Reingrese la contraseña" id="userPass2"></input></td>
+						</tr>
+					</table>
+
+				<input type="radio" name="logger" value="Sign In" onchange="changeForm()"> Sign In<br>
+		  	<input type="radio" name="logger" value="Sign Up" onchange="changeForm()"> Sign Up<br>
+	  		<br>
+				<br><br>
+			</form>
+			
+			<input type="button" value="Submit" onclick="submit()" />
+			<p id="message">MESSAGE HERE!</p>
+			
+		</div>
+	</body>
+</html>
