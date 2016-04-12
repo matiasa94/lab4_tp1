@@ -25,8 +25,8 @@ function signIn() {
 	var str = "backend/signIn.php?user=" + document.getElementById('userName').value + "&pass=" + document.getElementById('userPass').value;
 	loadDoc(str, function() {
 		if (this == 'true') {
-			showMain();
 			localStorage.setItem("currentUser", document.getElementById('userName').value);
+			showMain();
 			}
 		else document.getElementById('message').innerHTML = 'Usuario y/o contraseña inválidos';
 	});

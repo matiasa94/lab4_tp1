@@ -2,7 +2,7 @@ function showMain () {
 	window.location = "mainMenu.html";
 }
 
-function showLogForm() {
+function showLogForm () {
 	radios = document.getElementById('LogInForm').elements['logger'];
 	radios[0].checked = true;
 	document.getElementById("signInForm").style.display = 'block';
@@ -20,4 +20,8 @@ function changeForm () {
 		document.getElementById("signUpForm").style.display = "block";
 		document.getElementById("formTitle").innerHTML = "SIGN UP";
 	}
+}
+
+function showCurrentUser (id) {
+	document.getElementById(id).innerHTML += " - " + localStorage.currentUser;
 }
