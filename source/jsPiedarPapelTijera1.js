@@ -9,6 +9,7 @@ var urlImage;
 
 function comenzar(){
 	eleccionMaquina = Math.round(Math.random()*(3-1))+parseInt(1);
+	document.getElementById("eleccionPC").src = "imagenes/interrogacion.jpg"
 	//1: Piedra
 	//2: Papel
 	//3: Tijera
@@ -18,25 +19,31 @@ function comenzar(){
 }
 
 function piedra() {
+	if (eleccionMaquina == null) return;
 	document.getElementById("eleccionPC").src = urlImage;
 	if (eleccionMaquina == 1) alert('EMPATE!');
 	if (eleccionMaquina == 2) alert('PERDISTE!');
 	if (eleccionMaquina == 3) alert('GANASTE!');
-	document.getElementById("eleccionPC").src="imagenes/piedra.jpg";
+	
+	eleccionMaquina = null;
 }
 
 function papel() {
+	if (eleccionMaquina == null) return;
 	document.getElementById("eleccionPC").src = urlImage;
+	
 	if (eleccionMaquina == 1) alert('GANASTE!');
 	if (eleccionMaquina == 2) alert('EMPATE!');
 	if (eleccionMaquina == 3) alert('PERDISTE!');
-	document.getElementById("eleccionPC").src="imagenes/piedra.jpg";
+	eleccionMaquina = null;
 }
 
 function tijera() {
+	if (eleccionMaquina == null) return;
+
 	document.getElementById("eleccionPC").src = urlImage;
 	if (eleccionMaquina == 1) alert('PERDISTE!');
 	if (eleccionMaquina == 2) alert('GANASTE!');
 	if (eleccionMaquina == 3) alert('EMPATE!');
-	document.getElementById("eleccionPC").src="imagenes/piedra.jpg";
+	eleccionMaquina = null;
 }

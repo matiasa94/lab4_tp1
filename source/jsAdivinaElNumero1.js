@@ -13,8 +13,6 @@ var contadorIntentos;
 function comenzar() {
 	contadorIntentos = 0;
 	numeroSecreto = Math.round(Math.random()*100);
-
-	alert(numeroSecreto );
 	
 	document.getElementById("message").innerHTML = "EL NUMERO HA SIDO GENERADO!";
 	document.getElementById("intentos").value = contadorIntentos;

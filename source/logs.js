@@ -17,7 +17,6 @@ function signUp() {
 			document.getElementById('message').innerHTML = "La contraeñas no coinciden!";
 			return;
 		}
-		console.log(str);
 	loadDoc(str, function() {document.getElementById('message').innerHTML = this;});
 }
 
