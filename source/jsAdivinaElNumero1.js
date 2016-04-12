@@ -26,6 +26,7 @@ function verificar() {
 
 	if (document.getElementById("numero").value == numeroSecreto) {
 		document.getElementById("message").innerHTML = "USTED HA GANADO EN " + contadorIntentos + " INTENTOS!";
+		success(1);
 		numeroSecreto = null;
 		return;
 	}
