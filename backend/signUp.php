@@ -6,12 +6,12 @@ $con = create_conection ();
 $user = $_GET['user'];
 $pass = $_GET['pass'];
 
-$q = "select * from usuarios where userID = '". $user ."'";
+$q = "select * from users where userID = '". $user ."'";
 mysqli_select_db($con,"ajax_demo");
 $result = mysqli_query($con,$q);
 
 if ($result->num_rows != 0) echo "El ID ingresado ya esta registrado";
-else {mysqli_query($con,"insert into usuarios (userID, password) values ('" . $user . "','" . $pass ."')");
+else {mysqli_query($con,"insert into users (userID, password) values ('" . $user . "','" . $pass ."')");
 	echo "El usuario ha sido creado!";
 	}
 
