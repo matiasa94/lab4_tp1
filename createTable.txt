@@ -1,0 +1,5 @@
+create table statics_adivinanum (
+userID varchar(15) ,
+Won int,
+Attempts int
+)

@@ -9,6 +9,6 @@ function loadDoc(str, callback) {
   xhttp.send();
 }
 
-function success (argument) {
-	// body...
+function success (game, result) {
+	if (game == 1) ;
 }

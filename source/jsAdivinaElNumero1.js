@@ -28,6 +28,7 @@ function verificar() {
 		document.getElementById("message").innerHTML = "USTED HA GANADO EN " + contadorIntentos + " INTENTOS!";
 		success(1);
 		numeroSecreto = null;
+		success(1, 1);
 		return;
 	}
 
