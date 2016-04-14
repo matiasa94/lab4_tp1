@@ -1,7 +1,7 @@
 <?php
 
 include "sources.php";
-$con = create_conection ('salaDeJuegos');
+$con = create_conection ();
 
 $user = $_GET['user'];
 $pass = $_GET['pass'];

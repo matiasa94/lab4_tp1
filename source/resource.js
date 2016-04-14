@@ -9,6 +9,14 @@ function loadDoc(str, callback) {
   xhttp.send();
 }
 
-function success (game, result) {
-	if (game == 1) ;
+function success (game) {
+	if (game == 1) loadDoc('backend/statisticsRegister.php?userID=' + localStorage.currentUser + '&result=1&game=1',
+					function (){console.log('Something back: ' + this)}
+					);
+}
+
+function fail (game) {
+	if (game == 1) loadDoc('backend/statisticsRegister.php?userID=' + localStorage.currentUser + '&result=0&game=1',
+					function (){console.log('Something back: ' + this)}
+					);
 }

@@ -21,14 +21,17 @@ function comenzar() {
 function verificar() {
 	if (numeroSecreto == null) {alert("Genere un nuevo numero para comenzar."); return; }
 	
-	contadorIntentos++;
-	document.getElementById("intentos").value = contadorIntentos;
+		contadorIntentos++;
+		
+		fail(1);
+		document.getElementById("intentos").value = contadorIntentos;
 
 	if (document.getElementById("numero").value == numeroSecreto) {
 		document.getElementById("message").innerHTML = "USTED HA GANADO EN " + contadorIntentos + " INTENTOS!";
-		success(1);
+
 		numeroSecreto = null;
-		success(1, 1);
+
+		success(1);
 		return;
 	}
 
